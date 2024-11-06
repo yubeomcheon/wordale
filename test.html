@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>키보드 입력 예제</title>
+    <style>
+      .keyboard {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 200px;
+      }
+      .key {
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        cursor: pointer;
+      }
+      .key.correct {
+        background-color: #a0e1a0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="keyboard">
+      <!-- 키보드 키들을 생성합니다 -->
+      <div class="key" data-key="A">A</div>
+      <div class="key" data-key="B">B</div>
+      <div class="key" data-key="C">C</div>
+      <div class="key" data-key="D">D</div>
+      <!-- 필요한 만큼 키 추가 -->
+    </div>
+
+    <p>입력 결과: <span id="output"></span></p>
+
+    <script>
+      // 정답이 표시될 키
+      const correctAnswer = "B";
+
+      // 모든 키보드 키 요소를 가져옵니다.
+      const keys = document.querySelectorAll(".key");
+
+      // 각 키에 클릭 이벤트를 추가하고, 정답 표시를 업데이트합니다.
+      keys.forEach((key) => {
+        // 키에 정답 표시를 추가합니다.
+        if (key.dataset.key === correctAnswer) {
+          key.classList.add("correct");
+        }
+
+        // 키에 클릭 이벤트를 추가합니다.
+        key.addEventListener("click", () => {
+          const output = document.getElementById("output");
+          output.textContent = `입력한 키: ${key.dataset.key}`;
+        });
+      });
+    </script>
+  </body>
+</html>

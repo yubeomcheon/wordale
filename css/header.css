@@ -1,0 +1,30 @@
+header {
+    padding: 10px;
+    display: flex;
+    width: 97vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-right: 10px;
+}
+
+.header-icon {
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    cursor: pointer;
+}
+.header-title {
+    padding-left: 55%;
+    font-size: 35px;
+    font-weight: 1000;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

@@ -1,0 +1,27 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;  
+    border-top: 1px solid rgb(58, 58, 60,0.5);
+    padding-top: 10%;
+}
+
+
+.board-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.board-column {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid rgb(58, 58, 60,0.5) ;
+    font-weight: 1000;
+    font-size: 30px;
+}                                                                                                                            
